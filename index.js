@@ -38,13 +38,18 @@
 // var express = require("express");
 // var app = express();
 
-// app.get("/", function(req, res){
-//     res.redirect("https://google.com");
+// app.get("/google", function(req, res){
+//     res.redirect("https://www.google.com");
 //  });
 
 //  app.get("/google/:search", function(req, res){
 //     var search = req.params.search; 
-//     res.redirect("google.com/search?q=" + search);
+//     res.redirect("https://www.google.com/search?q=" + search);
+//  });
+
+//  app.get("/*", function(err){
+//     // res.send(404);
+//     res.status(404).send('Not Found');
 //  });
 
 //  app.listen(3000, function(){
@@ -119,19 +124,20 @@
 //     );
 // }
 // main();
-var fs = require("fs");
 
-var obj = 
-{
-    "fisrt_name": "Vardan",
-    "last_name": "Hovsepyan",
-   "age": 13,
-   "tumo_student": true
-}
-var myJSON =JSON.stringify(obj);
+// var fs = require("fs");
 
-function main(){
-    fs.writeFileSync("obj.json", myJSON);
+// var obj = 
+// {
+//     "fisrt_name": "Vardan",
+//     "last_name": "Hovsepyan",
+//    "age": 13,
+//    "tumo_student": true
+// }
+// var myJSON =JSON.stringify(obj);
 
-}
-main();
+// function main(){
+//     fs.writeFileSync("obj.json", myJSON);
+
+// }
+// main();
